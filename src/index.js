@@ -13,7 +13,7 @@ const Login = props => {
   return (
     <div>
       <p>Please login!</p>
-      <button onClick={() => props.onClick()}></button>
+      <button onClick={() => props.onClick()}>Sign In</button>
     </div>
   );
 };
