@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const Header = props => {
@@ -8,6 +8,20 @@ const Header = props => {
     </h1>
   );
 };
+
+const Login = props => {
+  return (
+    <div>
+      <p>Please login!</p>
+      <button onClick={() => props.onClick()}></button>
+    </div>
+  );
+};
+
+const Signout = props => {
+  return <button onClick={() => props.onClick()}>Sign Out</button>;
+};
+
 const Layout = props => {
   return (
     <div
@@ -15,8 +29,8 @@ const Layout = props => {
         width: "50%",
         color: "white",
         backgroundColor: "skyblue",
-        padding: "1px 20px 1px 40px",
-        margin: "10px 20px 30px 40px",
+        padding: "10px",
+        margin: "10px",
       }}
     >
       {props.children}
@@ -25,6 +39,11 @@ const Layout = props => {
 };
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+
+  const onClick = () => {
+    setIsAuthenticated(prev => !prev);
+  };
   return (
     <div>
       <Layout>
@@ -32,6 +51,13 @@ const App = () => {
       </Layout>
       <Layout>
         <h1>I want you!</h1>
+        {isAuthenticated && (
+          <>
+            <h1>Welcome Back!</h1>
+            <Signout onClick={onClick} />
+          </>
+        )}
+        {!isAuthenticated && <Login onClick={onClick} />}
       </Layout>
     </div>
   );
