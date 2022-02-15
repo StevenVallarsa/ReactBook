@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const Header = props => {
+  return (
+    <h1>
+      It's {props.day}, I'm in love! ... with {props.name}
+    </h1>
+  );
+};
+const Layout = props => {
+  return (
+    <div
+      style={{
+        width: "50%",
+        color: "white",
+        backgroundColor: "skyblue",
+        padding: "1px 20px 1px 40px",
+        margin: "10px 20px 30px 40px",
+      }}
+    >
+      {props.children}
+    </div>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  return (
+    <div>
+      <Layout>
+        <Header day="Friday" name="Kim" />
+      </Layout>
+      <Layout>
+        <h1>I want you!</h1>
+      </Layout>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));

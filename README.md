@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# ReactBook!
+### Definitely NOT a Facebook Clone
+
+- First week of re-learning React
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
