@@ -1,0 +1,26 @@
+input {
+  display: block;
+  padding: 5px;
+}
+
+.red {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  filter: opacity(25%);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  border: 2px solid red;
+}
+
+.item {
+  border: solid black;
+  width: 100%;
+}
