@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 const names = ["Julie", "Jessica", "Jill", "Juliana"];
@@ -20,8 +20,11 @@ const App = props => {
     isSkilled: true,
   });
 
+  useEffect(() => {
+    document.title = name.firstName + " " + name.lastName;
+  }, [name]);
+
   const handleNameChange = e => {
-    console.log(e.target.type, e.target.name);
     if (e.target.type === "checkbox") {
       if (e.target.name === "isEmployed") {
         setName(prev => ({ ...prev, isEmployed: !prev.isEmployed }));
@@ -31,11 +34,9 @@ const App = props => {
     } else {
       setName({ ...name, [e.target.name]: e.target.value });
     }
-    console.log(name);
   };
 
   const iveBeenClicked = e => {
-    console.log(e.target.innerHTML);
     alert(e.target.innerHTML);
   };
 
@@ -71,6 +72,11 @@ const App = props => {
           </li>
         ))}
       </ul>
+      <div>
+        <h1>
+          {name.firstName} {name.lastName} is {!name.isEmployed && "not"} employed.
+        </h1>
+      </div>
       <LongNumbers />
       <AbsoluteBox />
     </>
