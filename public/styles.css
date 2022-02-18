@@ -32,7 +32,6 @@ p {
 .container {
   border: 2px solid red;
   width: 500px;
-  height: 200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -43,8 +42,7 @@ p {
 
 .item {
   border: solid black;
-  width: 250px;
-  height: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
