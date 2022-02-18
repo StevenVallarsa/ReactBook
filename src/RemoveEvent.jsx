@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const RemoveEffect = props => {
+const RemoveEvent = props => {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -21,3 +21,5 @@ export const RemoveEffect = props => {
     </>
   );
 };
+
+export default RemoveEvent;
