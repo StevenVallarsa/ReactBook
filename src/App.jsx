@@ -4,13 +4,15 @@ import ReactDOM from "react-dom";
 import RemoveEvent from "./RemoveEvent";
 import CSSDropCap from "./CSSDropCap";
 import UserName from "./UserName";
+import Flex from "./Flex";
 
 const App = props => {
   return (
     <>
       {/* <CSSDropCap /> */}
       {/* <RemoveEvent /> */}
-      <UserName />
+      {/* <UserName /> */}
+      <Flex />
     </>
   );
 };

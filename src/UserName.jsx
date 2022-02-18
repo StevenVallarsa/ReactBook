@@ -49,13 +49,15 @@ const UserName = props => {
           />
         </div>
       </div>
-      <div>
-        <h3>Has a Job?</h3>
-        <input type="checkbox" name="job" onChange={updateName} defaultChecked={person.isEmployed} />
-      </div>
-      <div>
-        <h3>Knows React?</h3>
-        <input type="checkbox" name="react" onChange={updateName} defaultChecked={person.knowsReact} />
+      <div className="item" style={{ backgroundColor: "lightBlue" }}>
+        <div className="center">
+          <h3>Has a Job?</h3>
+          <input type="checkbox" name="job" onChange={updateName} defaultChecked={person.isEmployed} />
+        </div>
+        <div className="center">
+          <h3>Knows React?</h3>
+          <input type="checkbox" name="react" onChange={updateName} defaultChecked={person.knowsReact} />
+        </div>
       </div>
       <div style={{ textAlign: "center", fontSize: "30px", color: "red", fontFamily: "sans-serif" }} className="item">
         {person.firstName && person.lastName && "My Name is " + person.firstName + " " + person.lastName}
