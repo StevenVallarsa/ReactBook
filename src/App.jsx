@@ -5,6 +5,7 @@ import RemoveEvent from "./RemoveEvent";
 import CSSDropCap from "./CSSDropCap";
 import UserName from "./UserName";
 import Flex from "./Flex";
+import GitAPI from "./GitAPI";
 
 const App = props => {
   return (
@@ -12,7 +13,8 @@ const App = props => {
       {/* <CSSDropCap /> */}
       {/* <RemoveEvent /> */}
       {/* <UserName /> */}
-      <Flex />
+      {/* <Flex /> */}
+      <GitAPI />
     </>
   );
 };
