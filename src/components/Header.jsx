@@ -1,3 +1,8 @@
-export default function Header(props) {
-  return <h1>HEADER COMPONENT</h1>;
+export default function Header({ setUser }) {
+  return (
+    <div>
+      Welcome to the Jumble!
+      <button onClick={() => setUser("")}>Logout</button>
+    </div>
+  );
 }

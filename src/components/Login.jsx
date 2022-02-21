@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-export default function Login(props) {
+export default function Login({ setUser }) {
   const [username, setUsername] = useState("");
+
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(username);
+    setUser(username);
   };
+
   return (
     <div>
       <h2>Login</h2>

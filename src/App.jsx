@@ -6,14 +6,14 @@ import PostList from "./components/PostList";
 import Post from "./components/Post";
 
 export default function App(props) {
+  const [user, setUser] = useState("");
+
+  if (!user) {
+    return <Login setUser={setUser} />;
+  }
   return (
     <div>
-      <h1>Hello World!</h1>
-      <Login />
-      <Header />
-      <CreatePosts />
-      <PostList />
-      <Post />
+      <Header setUser={setUser} />
     </div>
   );
 }
